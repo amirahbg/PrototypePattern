@@ -7,7 +7,7 @@ fun main() {
 fun createUser(name: String, role: Role) {
     for (u in allUsers) {
         if (u.role == role) {
-            allUsers += User(name, role, u.permissions)
+            allUsers += u.copy(name = name)
             return
         }
     }
